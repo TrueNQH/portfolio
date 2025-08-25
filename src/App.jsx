@@ -9,25 +9,25 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 const DATA = {
   name: "Nguyễn Quang Huy",
-  role: "Fresher Frontend Developer",
+  role: "Software Engineer | Frontend Developer",
   tagline:
-    "ReactJS • UI/UX responsive • REST API integration • Performance minded",
+    "ReactJS • UI/UX responsive • REST API integration • AI intergration",
   location: "Đà Nẵng, Việt Nam",
-  email: "your.email@example.com",
-  github: "https://github.com/your-github",
-  linkedin: "https://www.linkedin.com/in/your-linkedin/",
+  email: "nguyenquanghuyktd@gmail.com",
+  github: "https://github.com/TrueNQH",
+  linkedin: "https://www.linkedin.com/",
   website: "https://aiscanner.tech",
-  cv: "#"
+ 
 };
 
 const SKILLS = [
-  { name: "React", level: 82 },
-  { name: "JavaScript (ES6+)", level: 82 },
-  { name: "HTML5/CSS3", level: 88 },
-  { name: "TypeScript", level: 65 },
-  { name: "REST API", level: 78 },
-  { name: "Git/GitHub", level: 75 },
-  { name: "Docker", level: 55 }
+   "React", "Python", "AI Integration" ,
+   "JavaScript (ES6+)" ,
+   "HTML5/CSS3" ,
+   "TypeScript" ,
+   "REST API",
+   "Git/GitHub" ,
+   "Docker", 
 ];
 
 const PROJECTS = [
@@ -35,37 +35,38 @@ const PROJECTS = [
     title: "AIscanner.tech",
     desc:
       "Nền tảng quét tài liệu & tạo nội dung; UI React, tích hợp API GPT, code-splitting & lazy load.",
-    stack: ["React", "Vite", "REST API", "GPT API"],
+    stack: ["React", "GenAI", "REST API", "GPT API"],
     live: "https://aiscanner.tech",
-    code: "https://github.com/your-github/aiscanner"
+    code: "https://github.com/TrueNQH/quickquestionAI"
   },
   {
-    title: "Salon Booking",
+    title: "Salon Booking", 
     desc:
       "Website đặt lịch salon tóc: form validation, auth cơ bản, responsive trên mọi thiết bị.",
     stack: ["React", "React Router", "Tailwind→CSS", "Axios"],
-    live: "https://your-salon-demo.example.com",
-    code: "https://github.com/your-github/salon-booking"
+    live: "https://salonxink.ixink.vn/",
+    code: "#"
   },
   {
     title: "Chrome Chat Extension",
     desc:
       "Tiện ích mở rộng truy cập chatbot trong trình duyệt; giao tiếp message passing + UI thu gọn.",
-    stack: ["React", "Chrome APIs"],
+    stack: ["JavaScript", "Chrome APIs"],
     live: "#",
-    code: "https://github.com/your-github/chrome-chat-extension"
+    code: "https://github.com/TrueNQH/quickquestionAI/releases/tag/v01"
   }
 ];
 
 const EXPERIENCE = [
   {
     company: "Công ty cổ phần XINKGROUP",
-    role: "Frontend Developer (Fresher/Intern)",
+    role: "AI Developer (Fresher/Intern)",
     period: "02/2024 – 08/2024",
     bullets: [
-      "Xây giao diện với React (hooks), tổ chức routing, tối ưu tải lần đầu.",
-      "Tích hợp REST API (Axios), xử lý auth, form validation & trạng thái lỗi/đang tải.",
-      "Phối hợp Git/GitHub, review & viết README triển khai; hỗ trợ QA sửa lỗi UI."
+      "Xây dựng chatbot AI tích hợp GPT-3.5/4, DALL·E 2, Whisper API; triển khai React + Vite.",
+      "Nghiên cứu, thử nghiệm mô hình AI mới, tối ưu chi phí API.",
+      "Triển khai code-splitting, lazy loading để cải thiện hiệu suất ứng dụng.",
+      "Hợp tác nhóm Agile, sử dụng Git/GitHub để quản lý mã nguồn."
     ]
   }
 ];
