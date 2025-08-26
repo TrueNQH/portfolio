@@ -10,8 +10,7 @@ import Footer from "./components/Footer";
 const DATA = {
   name: "Nguyễn Quang Huy",
   role: "Software Engineer | Frontend Developer",
-  tagline:
-    "ReactJS • UI/UX responsive • REST API integration • AI intergration",
+  tagline: ["ReactJS", "UI/UX responsive", "REST API integration", "AI integration"], 
   location: "Đà Nẵng, Việt Nam",
   email: "nguyenquanghuyktd@gmail.com",
   github: "https://github.com/TrueNQH",
@@ -43,7 +42,7 @@ const PROJECTS = [
     title: "Salon Booking", 
     desc:
       "Website đặt lịch salon tóc: form validation, auth cơ bản, responsive trên mọi thiết bị.",
-    stack: ["React", "React Router", "Tailwind→CSS", "Axios"],
+    stack: ["React", "React Router", "Tailwind CSS", "Axios"],
     live: "https://salonxink.ixink.vn/",
     code: "#"
   },
@@ -71,7 +70,7 @@ const EXPERIENCE = [
   }
 ];
 
-export default function Portfolio() {
+export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   
@@ -80,7 +79,7 @@ export default function Portfolio() {
     const handleScroll = () => {
       console.log("handleScroll called");
       
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 0);
       
       const sections = ['about', 'skills', 'projects', 'experience', 'contact'];
       const current = sections.find(section => {

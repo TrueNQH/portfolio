@@ -12,10 +12,40 @@ export default function Contact() {
         isSubmitted: false,
         error: null
       });
-function handleContactSubmit(e) { 
-    
+
+function validateForm() {
+    if (!contactForm.name || !contactForm.email || !contactForm.subject || !contactForm.message) {
+        return "Vui lòng điền đầy đủ tất cả các trường.";
+    }
+     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //
+    if (!emailRegex.test(contactForm.email)) {
+        return "Email không hợp lệ.";
+    }
+    return null;
 }
-function handleInputChange(e) {}
+
+function handleContactSubmit(e) { 
+    e.preventDefault();
+    const errorMsg = validateForm();
+    if (errorMsg) {
+        setFormStatus({ isSubmitting: false, isSubmitted: false, error: errorMsg });
+        return;
+    }
+    setFormStatus({ isSubmitting: true, isSubmitted: false, error: null });
+
+    setTimeout(() => {
+        setFormStatus({ isSubmitting: false, isSubmitted: true, error: null });
+        setContactForm({ name: '', email: '', subject: '', message: '' }); 
+    }, 1500);
+}
+
+function handleInputChange(e) {
+    const { name, value } = e.target;
+    setContactForm(prev => ({
+        ...prev,
+        [name]: value
+    }));
+}
 
     return (
          <section id="contact">
@@ -37,7 +67,6 @@ function handleInputChange(e) {}
                       onChange={handleInputChange}
                       className="form-input"
                       placeholder="Nhập họ và tên của bạn"
-                      required
                     />
                   </div>
                   <div className="form-group">
@@ -50,7 +79,6 @@ function handleInputChange(e) {}
                       onChange={handleInputChange}
                       className="form-input"
                       placeholder="Nhập email của bạn"
-                      required
                     />
                   </div>
                   <div className="form-group full-width">
@@ -63,7 +91,6 @@ function handleInputChange(e) {}
                       onChange={handleInputChange}
                       className="form-input"
                       placeholder="Nhập chủ đề tin nhắn"
-                      required
                     />
                   </div>
                   <div className="form-group full-width">
@@ -75,7 +102,6 @@ function handleInputChange(e) {}
                       onChange={handleInputChange}
                       className="form-textarea"
                       placeholder="Nhập nội dung tin nhắn của bạn..."
-                      required
                     />
                   </div>
                 </div>

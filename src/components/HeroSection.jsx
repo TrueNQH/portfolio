@@ -5,8 +5,9 @@ export default function HeroSection({DATA}) {
           <div className="hero-content">
             <div className="hero-text">
               <h1>{DATA.role}</h1>
-              <p className="tagline">{DATA.tagline}</p>
-              
+               {/* {DATA.tagline.map((it, index) => <p className="tagline" key={index}> {it} {DATA.tagline.length - 1 !== index ? "•" : "" } </p>)} */}
+              <p className="tagline">{DATA.tagline.join(" • ")}</p>
+
               <div className="hero-badges">
                 <span className="badge">📍 {DATA.location}</span>
                 <span className="badge">🌐 <a href={DATA.website} target="_blank" rel="noopener noreferrer">aiscanner.tech</a></span>
